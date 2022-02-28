@@ -7,14 +7,17 @@ class School{
         this.teachers = []
         this.students = []
     }
+
     hireTeacher(firstName,lastName,userName,passWord,age,gender,subject,salary){
         const teacher = new Teachers(firstName,lastName,userName,passWord,age,gender,subject,salary)
         this.teachers.push(teacher)
     }
+
     registerStudent(firstName,lastName,userName,passWord,age,gender,grade,tuition){
         const student = new Students(firstName,lastName,userName,passWord,age,gender,grade,tuition)
         this.students.push(student)
     }
+    
 }
 
 class Users{
@@ -72,6 +75,6 @@ class Students extends Users{
 const school = new School('OmAminSchool','Wadi-Al-Joz','Fuckers School')
 
 school.registerStudent('Ahmad','Kawasmi','iahmad2','276609',18,'male','12','male',5600)
-school.hireTeacher('ibrahim','sharif','pobdda','2919',22,'male','scince',6700)
+school.hireTeacher('ibrahim','sharif','pobdda','2919',22,'male','scince',4600)
 
 console.log(school);
